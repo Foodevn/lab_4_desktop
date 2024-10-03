@@ -1,0 +1,12 @@
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\bin\Debug\bai1.exe.config
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\bin\Debug\bai1.exe
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\bin\Debug\bai1.pdb
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.csproj.AssemblyReference.cache
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.Form1.resources
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.Properties.Resources.resources
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.csproj.GenerateResource.cache
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.csproj.CoreCompileInputs.cache
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.exe
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.pdb
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.FormBai2.resources
+C:\Users\HOANG PHUC\source\repos\lab4\bai1\obj\Debug\bai1.Form2.resources

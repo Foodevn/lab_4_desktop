@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Books.xml stores information about Mahesh Chand and related books 
+-->
+<catalog>
+  <book ISBN="9831123212" yearpublished="2002">
+    <title>A Programmer's Guide to ADO .Net using C#</title>
+    <author>
+      <first-name>Mahesh</first-name>
+      <last-name>Chand</last-name>
+    </author>
+    <publisher>Apress</publisher>
+    <price>44.99</price>
+  </book>
+  <book ISBN="9781234567890" yearpublished="2023">
+    <title>Learning C# for Beginners</title>
+    <author>
+      <first-name>John</first-name>
+      <last-name>Doe</last-name>
+    </author>
+    <publisher>TechBooks Publishing</publisher>
+    <price>39.99</price>
+  </book>
+  <book ISBN="9781234567890" yearpublished="2023">
+    <title>Learning C# for Beginners</title>
+    <author>
+      <first-name>John</first-name>
+      <last-name>Doe</last-name>
+    </author>
+    <publisher>TechBooks Publishing</publisher>
+    <price>39.99</price>
+  </book>
+  <book ISBN="9781234567890" yearpublished="2023">
+    <title>Learning C# for Beginners</title>
+    <author>
+      <first-name>John</first-name>
+      <last-name>Doe</last-name>
+    </author>
+    <publisher>TechBooks Publishing</publisher>
+    <price>39.99</price>
+  </book>
+  <book ISBN="9781234567890" yearpublished="2023">
+    <title>Learning C# for Beginners</title>
+    <author>
+      <first-name>John</first-name>
+      <last-name>Doe</last-name>
+    </author>
+    <publisher>TechBooks Publishing</publisher>
+    <price>39.99</price>
+  </book>
+  <book ISBN="9781234567890" yearpublished="2023">
+    <title>Learning C# for Beginners</title>
+    <author>
+      <first-name>John</first-name>
+      <last-name>Doe</last-name>
+    </author>
+    <publisher>TechBooks Publishing</publisher>
+    <price>39.99</price>
+  </book>
+</catalog>
