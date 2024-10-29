@@ -81,6 +81,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="bin\Debug\bai1.exe.config" />
+    <None Include="bin\Debug\DS_SV.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +100,7 @@
     <Content Include="bin\Debug\bai1.exe" />
     <Content Include="bin\Debug\bai1.pdb" />
     <Content Include="bin\Debug\DanhSach_SV.txt" />
+    <Content Include="bin\Debug\XML.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder1\" />

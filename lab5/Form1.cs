@@ -58,31 +58,26 @@ namespace lab5
 		}
 		private void DocFileXML(string path)
 		{
-			// Load XML file into XmlDocument instance
+			
 			var xmlDoc = new XmlDocument();
 			xmlDoc.Load(path);
-			// Get list of nodes whose name is Book
-			var nodeList = xmlDoc.DocumentElement.SelectNodes("/catalog/book");
+			XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes("/catalog/book");
 			string s = "";
 			foreach (XmlNode node in nodeList)
 			{
-				// Read attribute value
-				var isbn = node.Attributes["ISBN"].Value;
-				// Read child node value
-				var title = node.SelectSingleNode("title").InnerText;
+				string isbn = node.Attributes["ISBN"].Value;
+				string title = node.SelectSingleNode("title").InnerText;
 				var price = node.SelectSingleNode("price").InnerText;
-				// Read the descendant node value
 				var firstName = node.SelectSingleNode("author/first-name").InnerText;
 				var lastName = node.SelectSingleNode("author/last-name").InnerText;
-				 s+= string.Format("{0}, {1}, {2}, {3}, {4} \n",
-				isbn, title, firstName, lastName, price);
+				 s+= isbn+ title+ firstName+ lastName+ price+"\n ";
 			}
 			MessageBox.Show(s);
 		}
 
 		private void btn_XML_Click(object sender, EventArgs e)
 		{
-			DocFileXML(Application.StartupPath+ "\\book.xml");
+			DocFileXML("book.xml");
 		}
 
 		private void WriteXMLandCreate()
@@ -118,7 +113,7 @@ namespace lab5
 		}
 		void WriteXML()
 		{
-			string xmlFilePath = Application.StartupPath+"\\book.xml";
+			string xmlFilePath = "book.xml";
 			XmlDocument xmlDoc = new XmlDocument();
 			xmlDoc.Load(xmlFilePath);
 

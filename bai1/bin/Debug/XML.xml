@@ -1,0 +1,14 @@
+﻿<dsSinhVien>
+<SinhVien>
+	<MSSV>2212442</MSSV>
+	<HoTen>Hoang Phuc</HoTen>
+	<Phai>Nam</Phai>
+	<NgaySinh>2004-02-25T00:00:00</NgaySinh>
+</SinhVien>
+<SinhVien>
+	<MSSV>2212443</MSSV>
+	<HoTen>Nguyen Van A</HoTen>
+	<Phai>Nam</Phai>
+	<NgaySinh>2003-01-15T00:00:00</NgaySinh>
+</SinhVien>
+</dsSinhVien>

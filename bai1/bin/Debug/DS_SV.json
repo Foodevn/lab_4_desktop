@@ -1,0 +1,37 @@
+{
+  "dsSinhVien": [
+    {
+      "MSSV": "2212442",
+      "HoTen": "Hoang Phuc",
+      "Phai": "Nam",
+      "NgaySinh": "2004-02-25T00:00:00",
+      "Lop": "ctk46",
+      "SDT": "01903183",
+      "Email": "2212442@DLU.EDU.VN",
+      "DiaChi": "Ngo Gia Tu",
+      "Hinh": "hjdfhgkj"
+    },
+    {
+      "MSSV": "2212443",
+      "HoTen": "Nguyen Van A",
+      "Phai": "Nam",
+      "NgaySinh": "2003-01-15T00:00:00",
+      "Lop": "ctk46",
+      "SDT": "01903184",
+      "Email": "2212443@DLU.EDU.VN",
+      "DiaChi": "Le Loi",
+      "Hinh": "hjdfhgkm"
+    },
+    {
+      "MSSV": "2212443",
+      "HoTen": "Nguyen Van A",
+      "Phai": "Nam",
+      "NgaySinh": "2003-01-15T00:00:00",
+      "Lop": "CTK46",
+      "SDT": "(019) 031-84",
+      "Email": "2212443@DLU.EDU.VN",
+      "DiaChi": "Le Loi",
+      "Hinh": "hjdfhgkm"
+    }
+  ]
+}

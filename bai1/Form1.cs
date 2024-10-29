@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,23 +16,44 @@ namespace bai1
 {
 	public partial class Form1 : Form
 	{
-		DanhSachSv ds=new DanhSachSv();
-		bool thayDoiDuLieu=false;
+		DanhSachSv ds = new DanhSachSv();
+		bool thayDoiDuLieu = false;
 		public Form1()
 		{
 			InitializeComponent();
 			listViewDS.Click += new EventHandler(listviewds_click);
-			
-			ds.DocTuFile();
-			TaiDanhSach();			
 		}
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			//ds.DocTuFileTXT();
+			ds.DocFileJson();
+			//ds.RunJSON();
 			
+			
+			TaiDanhSach();
+		}
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			LuuListViewVaoDS();
+			if (thayDoiDuLieu)
+			{
+				DialogResult result = MessageBox.Show("bạn có lưu những thay đổi không",
+					"lưu thay đổi", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+				if (result == DialogResult.OK)
+				{
+					//SaveDataInTXT();
+					GhiFileJson();
+				}
+				else e.Cancel = true;
+			}
+		}
+
 		public void TaiDanhSach()
 		{
-			listViewDS.Items.Clear();	
+			listViewDS.Items.Clear();
 			for (int i = 0; i < ds.dsSinhVien.Count; i++)
 			{
-				SinhVien sv1= ds.dsSinhVien[i];
+				SinhVien sv1 = ds.dsSinhVien[i];
 				string[] s = new string[9];
 				s[0] = sv1.MSSV;
 				s[1] = sv1.HoTen;
@@ -41,7 +63,7 @@ namespace bai1
 				s[5] = sv1.SDT;
 				s[6] = sv1.Email;
 				s[7] = sv1.DiaChi;
-				s[8] = sv1.Hinh;			
+				s[8] = sv1.Hinh;
 				ListViewItem item = new ListViewItem(s);
 				listViewDS.Items.Add(item);
 			}
@@ -55,16 +77,17 @@ namespace bai1
 		private void btnChonHinh_Click(object sender, EventArgs e)
 		{
 
-			OpenFileDialog openFileDialog = new OpenFileDialog();
-			openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			using (OpenFileDialog openFileDialog = new OpenFileDialog())
 			{
-				tbDuongDanHinh.Text = openFileDialog.FileName;
-				pictureBoxHinhAnh.Image = Image.FromFile(openFileDialog.FileName);
-			}
+				openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-		}		
+				if (openFileDialog.ShowDialog() == DialogResult.OK)
+				{
+					tbDuongDanHinh.Text = openFileDialog.FileName;
+					pictureBoxHinhAnh.Image = Image.FromFile(openFileDialog.FileName);
+				}
+			}
+		}
 		private void btnMacDinh_Click(object sender, EventArgs e)
 		{
 			tbMSSV.Text = "";
@@ -84,14 +107,14 @@ namespace bai1
 			s[0] = tbMSSV.Text;
 			s[1] = tbHoTen.Text;
 			s[2] = rdbNam.Text;
-			if (rdbNu.Checked==true)
-			s[2]=rdbNu.Text;
-			s[3]=dtpNgaySinh.Text;
+			if (rdbNu.Checked == true)
+				s[2] = rdbNu.Text;
+			s[3] = dtpNgaySinh.Text;
 			s[4] = cbbLop.Text;
 			s[5] = mtbSDT.Text;
 			s[6] = tbEmail.Text;
 			s[7] = tbDiaChi.Text;
-			s[8]=tbDuongDanHinh.Text;
+			s[8] = tbDuongDanHinh.Text;
 			return s;
 
 		}
@@ -117,7 +140,7 @@ namespace bai1
 		}
 		private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (listViewDS.SelectedItems.Count>0)
+			if (listViewDS.SelectedItems.Count > 0)
 			{
 				ListViewItem Item = listViewDS.SelectedItems[0];
 				listViewDS.Items.RemoveAt(Item.Index);
@@ -129,20 +152,33 @@ namespace bai1
 		{
 			TaiDanhSach();
 		}
-
-		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		void GhiFileJson()
 		{
-			if (thayDoiDuLieu)
+			string filepath = "DS_SV.json";
+			string jsonData = JsonConvert.SerializeObject(ds,Formatting.Indented);
+			File.WriteAllText(filepath, jsonData);
+		}
+		void LuuListViewVaoDS()
+		{
+			ds.XoaDS();
+			foreach (ListViewItem item in listViewDS.Items)
 			{
-				DialogResult result= MessageBox.Show("bạn có lưu những thay đổi không",
-					"lưu thay đổi", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
-				if(result==DialogResult.OK)
-				{
-					SaveDataInTXT();
-				}
-				else e.Cancel = true;
+				
+				SinhVien sv = new SinhVien();
+				sv.MSSV = item.SubItems[0].Text;
+				sv.HoTen = item.SubItems[1].Text;
+				sv.Phai = item.SubItems[2].Text;
+				sv.NgaySinh=DateTime.Parse((string)item.SubItems[3].Text);
+				sv.Lop= item.SubItems[4].Text;
+				sv.SDT= item.SubItems[5].Text;
+				sv.Email= item.SubItems[6].Text;
+				sv.DiaChi= item.SubItems[7].Text;
+				sv.Hinh= item.SubItems[8].Text;
+				ds.ThemSV(sv);
 			}
 		}
+		
+
 		public void SaveDataInTXT()
 		{
 			using (StreamWriter streamWriter = new StreamWriter("DanhSach_SV.txt"))
@@ -158,13 +194,14 @@ namespace bai1
 					string email = item.SubItems[6].Text;
 					string diachi = item.SubItems[7].Text;
 					string hinh = item.SubItems[8].Text;
-
 					streamWriter.WriteLine($"{mssv};{hoten};{phai};{ngaysinh};{lop};{sdt};{email};{diachi};{hinh}");
 				}
-				
+				streamWriter.Close();
 			}
 			thayDoiDuLieu = false;
 
 		}
+
+
 	}
 }

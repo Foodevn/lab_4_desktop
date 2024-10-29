@@ -49,7 +49,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.pictureBox1);
 			this.Name = "UserControl1";
-			this.Size = new System.Drawing.Size(133, 125);
+			this.Size = new System.Drawing.Size(189, 188);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 

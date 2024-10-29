@@ -1,0 +1,11 @@
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\bin\Debug\Lab7_Advanced_Command.exe.config
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\bin\Debug\Lab7_Advanced_Command.exe
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\bin\Debug\Lab7_Advanced_Command.pdb
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.csproj.AssemblyReference.cache
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.Form1.resources
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.Properties.Resources.resources
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.csproj.GenerateResource.cache
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.csproj.CoreCompileInputs.cache
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.exe
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\Lab7_Advanced_Command.pdb
+C:\Users\hoang\source\repos\Desktop_lab4\Lab7_Advanced_Command\obj\Debug\bai1.foodInfoForm.resources

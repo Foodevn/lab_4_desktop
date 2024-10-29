@@ -29,31 +29,4 @@
     <publisher>TechBooks Publishing</publisher>
     <price>39.99</price>
   </book>
-  <book ISBN="9781234567890" yearpublished="2023">
-    <title>Learning C# for Beginners</title>
-    <author>
-      <first-name>John</first-name>
-      <last-name>Doe</last-name>
-    </author>
-    <publisher>TechBooks Publishing</publisher>
-    <price>39.99</price>
-  </book>
-  <book ISBN="9781234567890" yearpublished="2023">
-    <title>Learning C# for Beginners</title>
-    <author>
-      <first-name>John</first-name>
-      <last-name>Doe</last-name>
-    </author>
-    <publisher>TechBooks Publishing</publisher>
-    <price>39.99</price>
-  </book>
-  <book ISBN="9781234567890" yearpublished="2023">
-    <title>Learning C# for Beginners</title>
-    <author>
-      <first-name>John</first-name>
-      <last-name>Doe</last-name>
-    </author>
-    <publisher>TechBooks Publishing</publisher>
-    <price>39.99</price>
-  </book>
 </catalog>

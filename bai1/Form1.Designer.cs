@@ -113,7 +113,7 @@
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.groupBox1.Size = new System.Drawing.Size(583, 222);
+			this.groupBox1.Size = new System.Drawing.Size(583, 216);
 			this.groupBox1.TabIndex = 1;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Thông tin sinh viên ";
@@ -372,6 +372,7 @@
             this.clhHinh});
 			this.listViewDS.ContextMenuStrip = this.contextMenuStrip1;
 			this.listViewDS.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listViewDS.FullRowSelect = true;
 			this.listViewDS.GridLines = true;
 			this.listViewDS.HideSelection = false;
 			this.listViewDS.Location = new System.Drawing.Point(3, 17);
@@ -460,6 +461,7 @@
 			this.Name = "Form1";
 			this.Text = "quản lý sinh viên khoa công nghệ thông tin";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxHinhAnh)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
